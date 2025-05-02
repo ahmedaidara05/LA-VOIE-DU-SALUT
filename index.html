@@ -1,41 +1,90 @@
-const chatbotBtn = document.getElementById("chatbot-button");
-const chatbotBox = document.getElementById("chatbot");
-const chatBody = document.getElementById("chat-body");
-const chatInput = document.getElementById("chat-input");
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Voie du Salut</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
-chatbotBtn.addEventListener("click", () => {
-  chatbotBox.classList.toggle("hidden");
-});
+  <header class="navbar">
+    <div class="logo">La Voie du Salut</div>
+    <ul class="nav-links">
+      <li><a href="#presentation">Présentation</a></li>
+      <li><a href="#livre">Le Livre</a></li>
+      <li><a href="#auteur">Auteur</a></li>
+      <li><a href="#commander">Commander</a></li>
+      <li><a href="#app">App Mobile</a></li>
+      <li><a href="#assistant">Assistant IA</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
 
-chatInput.addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
-    const question = chatInput.value.trim();
-    if (!question) return;
+  <section class="hero" id="presentation">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Bienvenue dans <br> <span>La Voie du Salut</span></h1>
+      <p>Un voyage spirituel et intellectuel avec Ahmed Said Aidara</p>
+      <a href="#commander"><button class="cta-button">Commander Maintenant</button></a>
+    </div>
+  </section>
 
-    appendMessage("Vous", question);
-    chatInput.value = "";
+  <section class="section" id="livre">
+    <h2>À propos du livre</h2>
+    <p>"La Voie du Salut" explore les chemins de la vérité, de la foi et de la sagesse dans un monde troublé.</p>
+  </section>
 
-    setTimeout(() => {
-      const response = getBotResponse(question);
-      appendMessage("IA", response);
-    }, 500);
-  }
-});
+  <section class="section" id="auteur">
+    <h2>À propos de l’auteur</h2>
+    <p>Ahmed Said Aidara est un penseur engagé, écrivain sénégalais et défenseur d’une spiritualité éclairée et universelle.</p>
+  </section>
 
-function appendMessage(sender, text) {
-  const msg = document.createElement("div");
-  msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
-  chatBody.appendChild(msg);
-  chatBody.scrollTop = chatBody.scrollHeight;
-}
+  <section class="section" id="commander">
+    <h2>Commander le livre</h2>
+    <p>Disponible via Orange Money, Wave, et carte bancaire. Ne manquez pas votre exemplaire !</p>
+    <a href="#contact"><button class="cta-button">Commander</button></a>
+  </section>
 
-function getBotResponse(input) {
-  input = input.toLowerCase();
+  <section class="section" id="app">
+    <h2>Application Mobile</h2>
+    <p>Lisez "La Voie du Salut" sur mobile avec des fonctionnalités exclusives : IA intégrée, surlignage, notes personnelles, etc.</p>
+  </section>
 
-  if (input.includes("auteur")) return "L’auteur est Ahmed Said Aidara, un penseur sénégalais.";
-  if (input.includes("sujet") || input.includes("thème")) return "Le livre aborde la foi, la spiritualité et la quête de vérité.";
-  if (input.includes("titre")) return "Le titre du livre est 'La Voie du Salut'.";
-  if (input.includes("acheter")) return "Vous pouvez le commander via Orange Money ou Wave.";
-  
-  return "Je ne suis pas sûr de comprendre, mais je vais apprendre ! 😊";
-}
+  <section class="section" id="assistant">
+    <h2>Assistant IA</h2>
+    <p>Posez vos questions sur le livre, ses messages, les citations ou les interprétations. L’IA vous répond instantanément !</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Nom" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Votre message..." required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://facebook.com/toncompte" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/toncompte" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/toncompte" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/tonnumero" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 Ahmed Said Aidara</p>
+  </footer>
+
+  <div id="chatbot-button">💬</div>
+  <div class="chatbot hidden" id="chatbot">
+    <div class="chat-header">Assistant IA</div>
+    <div class="chat-body" id="chat-body"></div>
+    <input type="text" id="chat-input" placeholder="Pose ta question sur le livre..."/>
+  </div>
+
+</body>
+</html>
