@@ -1,5 +1,4 @@
 // Mobile Menu
-
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -14,7 +13,6 @@ window.onscroll = () => {
 }
 
 // Scroll Reveal
-
 const sr = ScrollReveal ({
     distance: '60px',
     duration: 2500,

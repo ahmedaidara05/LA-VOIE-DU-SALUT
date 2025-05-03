@@ -20,12 +20,11 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 100; display: 
     .header-btn .sign-in:hover { background: var(--main-color); }
 
 /* Home */
-
 .home { 
     width: 100%; 
     min-height: 100vh; 
     position: relative; 
-    background: url('https://i.postimg.cc/nrCy3xwN/Car-Website-1-2x.png');
+    background: url('mon-image.jpg');
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
@@ -46,7 +45,6 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 100; display: 
     .input-box input { padding: 7px; outline: none; border: none; background: #EEEFF1; border-radius: .5rem; font-size: 1rem; }
 
 /* Ride */
-
 .heading { text-align: center; }
     .heading span { font-weight: 500; text-transform: uppercase; }
     .heading h1 { font-size: 2rem; }
@@ -57,7 +55,6 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 100; display: 
         .ride-container .box h2 { font-size: 1.3rem; font-weight: 500; margin: 1.4rem 0 0.5rem; }
 
 /* Services */
-
 .services-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, auto)); gap: 1rem; margin-top: 2rem; }
     .services-container .box { padding: 10px; border-radius: 1rem; box-shadow: 1px 4px 41px rgba(0, 0, 0, .1); }
         .services-container .box .box-img { width: 100%; height: 200px; }
@@ -70,7 +67,6 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 100; display: 
             .services-container .box .btn:hover { background: var(--main-color); }
 
 /* About */
-
 .about-container { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 2rem; align-items: center; gap: 1rem; margin-top: 1rem; }
 .about-img img { width: 100%; }
 .about-text span { font-weight: 500; color: var(--main-color); text-transform: uppercase; }
@@ -79,7 +75,6 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 100; display: 
     .about-text .btn:hover { background: var(--main-color); }
 
 /* Reviews */
-
 .reviews-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, auto)); gap: 1rem; margin-top: 2rem; }
     .reviews-container .box { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; box-shadow: 1px 4px 4px rgba(0, 0, 0, .1); border-radius: .5rem; }
         .reviews-container .box h2 { font-size: 1.1rem; font-weight: 600; margin: .5rem 0 .5rem; }
@@ -89,7 +84,6 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 100; display: 
     .rev-img img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center; border: 2px solid var(--second-color); }
 
 /* Newsletter */
-
 .newsletter { background: linear-gradient(to top right, #FE5B3D, #FFAC38); display: flex; flex-direction: column; align-items: center; }
     .newsletter h2 { color: #FFFFFF; font-size: 1.8rem; }
     .newsletter .box { margin-top: 1rem; background: #FFFFFF; border-radius: .5rem; padding: 4px 8px; width: 350px; display: flex; justify-content: space-between; }
@@ -100,7 +94,6 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 100; display: 
 .social a { color: #444444; padding: 10px; font-size: 21px; }
 
 /* Responsive */
-
 @media(max-width: 1375px) {
     .text { display: none; }
 }
