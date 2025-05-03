@@ -1,30 +1,30 @@
-// Mobile Menu
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
-
-window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navbar.classList.remove('active');
-}
-
-// Scroll Reveal
-const sr = ScrollReveal ({
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-    reset: true
-})
-
-sr.reveal('.text', { delay: 200, origin: 'top'})
-sr.reveal('.form-container form', { delay: 400, origin: 'left'})
-sr.reveal('.heading', { delay: 400, origin: 'top'})
-sr.reveal('.ride-container .box', { delay: 200, origin: 'top'})
-sr.reveal('.services-container .box', { delay: 200, origin: 'top'})
-sr.reveal('.about-container', { delay: 200, origin: 'top'})
-sr.reveal('.reviews-container', { delay: 200, origin: 'top'})
-sr.reveal('.newsletter .box', { delay: 400, origin: 'bottom'})
+function toggleChat() {
+    const chatBox = document.getElementById('chatBox');
+    chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+  }
+  
+  function handleKey(e) {
+    if (e.key === 'Enter') {
+      const input = document.getElementById('userInput');
+      const userMessage = input.value;
+      if (userMessage.trim() === '') return;
+  
+      appendToChat("Vous", userMessage);
+      input.value = "";
+  
+      // Simuler une réponse d’IA
+      setTimeout(() => {
+        const fakeResponse = "Hmm... laisse-moi te répondre à propos de ça.";
+        appendToChat("IA", fakeResponse);
+      }, 1000);
+    }
+  }
+  
+  function appendToChat(sender, message) {
+    const chatLog = document.getElementById('chatLog');
+    const messageElement = document.createElement('div');
+    messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    chatLog.appendChild(messageElement);
+    chatLog.scrollTop = chatLog.scrollHeight;
+  }
+  
