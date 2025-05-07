@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "197463266661",
+    "project_id": "la-voie-du-salut-51126",
+    "storage_bucket": "la-voie-du-salut-51126.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197463266661:android:a98c4609236cc6d2cb3d8c",
+        "android_client_info": {
+          "package_name": "com.example.lavoiedusalut"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "197463266661-84l0aive7o751ju5nranvk75vp5l420i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2aAWJ1EyEV1Fnu81oBF-bWi8sfqtLnMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "197463266661-84l0aive7o751ju5nranvk75vp5l420i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
